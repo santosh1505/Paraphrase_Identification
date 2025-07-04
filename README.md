@@ -21,6 +21,25 @@ This project identifies if two questions are paraphrases using a Siamese Manhatt
     2.  Create a `data/` folder in your project root and place `questions.csv` inside it.
     3.  **Crucial**: Modify the hardcoded path in `train_model.py` from `r"C:\Users\Santo\Desktop\major_para\data\questions.csv"` to `"data/questions.csv"` (or your actual path).
 
+**##Project Folder Structure**
+major_para/
+├── data/                         
+│   └── questions.csv              # Dataset containing question pairs
+│
+├── models/                       
+│   ├── malstm_model.h5           # Trained MaLSTM model
+│   └── tokenizer.pkl             # Saved tokenizer object
+│
+├── venv/                         # Python virtual environment (add to .gitignore)
+│
+├── download_nltk_data.py         # Script to download required NLTK resources
+├── predict_interface.py          # Script for prediction using trained model
+├── streamlit_app.py              # Streamlit-based user interface
+├── train_model.py                # Script for training the MaLSTM model
+
+
+
+
 ## Essential Setup & Installation
 
 1.  **Python**: Ensure Python 3.7+ is installed. Create a virtual environment (recommended).
